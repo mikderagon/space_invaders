@@ -1,0 +1,4 @@
+(
+  title: "Space Invaders",
+  dimensions: Some((900, 800)),
+)

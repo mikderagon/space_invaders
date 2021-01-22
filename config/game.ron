@@ -1,0 +1,5 @@
+(
+  bullet_velocity: 1200.0,
+  trigger_reset_timeout: 0.5,
+  alien_velocity: 300.0,
+)

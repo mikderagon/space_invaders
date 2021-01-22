@@ -1,0 +1,26 @@
+List((
+  texture_width: 1566,
+  texture_height: 1044,
+  sprites: [
+    // alien
+    (
+      x: 0, y: 0, width: 541, height: 513,
+    ),
+    // player bullet
+    (
+      x: 710, y: 0, width: 140, height: 528,
+    ),
+    // alien bullet
+    (
+      x: 26, y: 0, width: 16, height: 25,
+    ),
+    // explosion
+    (
+      x: 0, y: 22, width: 14, height: 23,
+    ),
+    // ship
+    (
+      x: 520, y: 518, width: 526, height: 523,
+    ),
+  ]
+))
