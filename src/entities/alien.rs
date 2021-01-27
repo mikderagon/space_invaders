@@ -23,7 +23,7 @@ pub fn initialise_aliens(
   };
   
   let numbers = 0..;
-  let range = numbers.take(10);
+  let range = numbers.take(16);
   range.map(|_number| {
     let _screen_dimensions = (*world.read_resource::<ScreenDimensions>()).clone();
     let (screen_width, screen_height) = { (_screen_dimensions.width(), _screen_dimensions.height()) };
