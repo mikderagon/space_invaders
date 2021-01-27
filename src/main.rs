@@ -8,6 +8,7 @@ use amethyst::{
     utils::application_root_dir,
     core::transform::TransformBundle,
     input::{InputBundle, StringBindings},
+    ui::{RenderUi, UiBundle},
 };
 
 mod state;
@@ -39,10 +40,12 @@ pub fn run() -> Result<(), amethyst::Error> {
         .with_bundle(
             RenderingBundle::<DefaultBackend>::new()
                 .with_plugin(RenderToWindow::from_config_path(display)?.with_clear(BACKGROUND_COLOR))
-                .with_plugin(RenderFlat2D::default()),
+                .with_plugin(RenderFlat2D::default())
+                .with_plugin(RenderUi::default()),
         )?
         .with_bundle(TransformBundle::new())?
         .with_bundle(input_bundle)?
+        .with_bundle(UiBundle::<StringBindings>::new())?
         .with(systems::ShipSystem, "player_system", &["input_system"])
         .with(systems::AlienSystem, "alien_system", &[])
         .with(systems::BulletSystem, "bullet_system", &[])

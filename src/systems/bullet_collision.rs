@@ -6,8 +6,6 @@ use crate::components::Bullet;
 
 pub struct BulletCollisionSystem;
 
-// commit test
-
 impl <'s> System<'s> for BulletCollisionSystem {
   type SystemData = (
     Entities<'s>,
